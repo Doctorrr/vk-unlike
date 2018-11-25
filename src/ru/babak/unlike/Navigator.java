@@ -8,7 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Этот класс будет браузером
@@ -39,33 +41,46 @@ public class Navigator {
     /**
      * Этот метод снимает лайки с одной ВК-сущности
      */
-    public static void unlike(ArrayList<String> links, vkObj obj) throws InterruptedException {
+    public static void unlike(ArrayList<String> links, vkObj obj, DB db) throws InterruptedException, SQLException, ClassNotFoundException {
 
         Integer counter = 0;
+        Random r = new Random();
+
         for (String link : links) {
 
-            driver.get( link.toString() );
-            wait.until( webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
+            if ( !db.isDeleted( link.toString() ) ) {
 
-            if ( driver.findElements(By.cssSelector("div.like_btns > a.like_btn.like._like.active > div.like_button_icon")).size() != 0) {
+                driver.get( link.toString() );
+                wait.until( webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
 
-                WebElement like = driver.findElement( By.cssSelector( "div.like_btns > a.like_btn.like._like.active > div.like_button_icon") );
-                js.executeScript("arguments[0].scrollIntoView();window.scrollBy(0, -40);", like);
-                like.click();
+                if ( driver.findElements(By.cssSelector("div.like_btns > a.like_btn.like._like.active > div.like_button_icon")).size() != 0) {
 
-                System.out.println(counter.toString() + " " + link.toString() + " click;");
-                synchronized (lock) {
-                    lock.wait(144);
-                }
+                    WebElement like = driver.findElement( By.cssSelector( "div.like_btns > a.like_btn.like._like.active > div.like_button_icon") );
+                    js.executeScript("arguments[0].scrollIntoView();window.scrollBy(0, -40);", like);
+                    like.click();
 
-                counter = ++counter;
-                if (counter > 2) {
-                    //Это для отладки
+                    System.out.println(counter.toString() + " " + link.toString() + " click;");
+                    synchronized (lock) {
+                        r = new Random();
+                        lock.wait(r.ints(5644, (9999)).findFirst().getAsInt() );
+                    }
+
+                    db.delete( link.toString() );
+
+                    counter = ++counter;
+                    if (counter > 2) {
+                        //Это для отладки
 //                    return;
 //                    System.exit(0);
+                    }
+
+
+                } else {
+                    db.delete( link.toString() );
+                    System.out.println(counter.toString() + " " + link.toString() + " skip (no like);");
                 }
 
-            } else System.out.println(counter.toString() + " " + link.toString() + " skip;");
+            } else System.out.println(counter.toString() + " " + link.toString() + " skip (by DB);");
 
         }
     }

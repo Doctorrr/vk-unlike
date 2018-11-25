@@ -3,6 +3,7 @@ package ru.babak.unlike;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -13,7 +14,7 @@ import java.util.regex.Pattern;
 public class LinksGetter {
 
 
-    public void start() throws IOException, InterruptedException {
+    public void start( DB db ) throws IOException, InterruptedException, SQLException, ClassNotFoundException {
 
         ArrayList< vkObj > vkObjs = new ArrayList< vkObj >();
 
@@ -31,7 +32,7 @@ public class LinksGetter {
             ArrayList<String> links = parce( obj );
 
             //снимаем лайки
-            Navigator.unlike( links, obj );
+            Navigator.unlike( links, obj, db );
 
         }
 

@@ -6,7 +6,9 @@
 
 
 Программа, естественно, предназначена только для ознакомительных целей. Видео:
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/MvTKHrJRRnw/0.jpg)](https://www.youtube.com/watch?v=MvTKHrJRRnw)
+
+
+[![Видосик](https://img.youtube.com/vi/MvTKHrJRRnw/0.jpg)](https://www.youtube.com/watch?v=MvTKHrJRRnw)
 
 ## Как пользоваться:
 Скачать архив со своими данными со страницы https://vk.com/data_protection?section=rules&scroll_to_archive=1

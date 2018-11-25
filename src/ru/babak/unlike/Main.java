@@ -9,8 +9,10 @@ public class Main {
         DB db = new DB();
         db.connect( "likes.db" );
 
-        db.delete( "test" );
-        db.isDeleted( "test" );
+//        db.delete( "test" );
+//        System.out.println( db.isDeleted( "test" ) );
+//
+//        System.exit(0);
 
 
         LinksGetter linksGetter = new LinksGetter();

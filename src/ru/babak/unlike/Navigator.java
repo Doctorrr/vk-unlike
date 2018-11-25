@@ -68,7 +68,7 @@ public class Navigator {
                     db.delete( link.toString() );
 
                     counter = ++counter;
-                    if (counter > 2) {
+                    if ( counter > 5) {
                         //Это для отладки
 //                    return;
 //                    System.exit(0);

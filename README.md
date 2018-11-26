@@ -12,19 +12,22 @@
 [![Видосик](https://img.youtube.com/vi/qSb3IdgnhZc/0.jpg)](https://www.youtube.com/watch?v=qSb3IdgnhZc)
 
 ## Как пользоваться:
-Скачать архив со своими данными со страницы https://vk.com/data_protection?section=rules&scroll_to_archive=1
+Скачайте архив со своими данными со страницы https://vk.com/data_protection?section=rules&scroll_to_archive=1
 
 
-1. Положить содержащуюся в нём папку "likes" в корневую папку программы;
+1. Положите содержащуюся в нём папку "likes" в корневую папку программы;
 
 
-2. Работает на [Java 9+](https://www.oracle.com/technetwork/java/javase/downloads/index.html);
+2. Если не установлена Java, ставьте [Java 9+](https://www.oracle.com/technetwork/java/javase/downloads/index.html) -- на ней написана программа;
 
 
-3. Запустить для Windows: файл \_run.bat, как показано на видео;
+3. Для Windows запустите файл \_run.bat, как показано на видео выше;
+
+
+4. После ввода пароля ( [Как видите, он нигде не сохраняется](https://github.com/Doctorrr/vk-unlike/blob/master/src/ru/babak/unlike/Navigator.java#L37)  ), программа начнёт перебирать и снимать ваши отметки "нравится".
  
 
-4. Если во время использования программы появилась "капча" (проверка на роботов) -- подождите некоторое время и запустите снова.
+5. Если во время использования программы появилась "капча" (проверка на роботов) -- подождите некоторое время и запустите снова.
 
 --------------
 Моё резюме: https://babak.ru

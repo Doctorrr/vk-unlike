@@ -9,7 +9,7 @@
 Естественно, программа предназначена для ознакомительных целей. Видео-демо:
 
 
-[![Видосик](https://img.youtube.com/vi/qSb3IdgnhZc/0.jpg)](https://www.youtube.com/watch?v=qSb3IdgnhZc)
+[![Видосик](https://img.youtube.com/vi/5PcAadEOjIQ/0.jpg)](https://www.youtube.com/watch?v=5PcAadEOjIQ)
 
 ## Как пользоваться:
 Скачайте архив со своими данными со страницы https://vk.com/data_protection?section=rules&scroll_to_archive=1

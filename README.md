@@ -15,13 +15,13 @@
 Скачать архив со своими данными со страницы https://vk.com/data_protection?section=rules&scroll_to_archive=1
 
 
-1. Положить содержащуюся в нём папку "likes" в корневую папку программы.
+1. Положить содержащуюся в нём папку "likes" в корневую папку программы;
 
 
-2. Программа работает на [Java 9+](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+2. Работает на [Java 9+](https://www.oracle.com/technetwork/java/javase/downloads/index.html);
 
 
-3. Запустить для Windows: файл \_run.bat, как показано на видео.
+3. Запустить для Windows: файл \_run.bat, как показано на видео;
  
 
 4. Если во время использования программы появилась "капча" (проверка на роботов) -- подождите некоторое время и запустите снова.
